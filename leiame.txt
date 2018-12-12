@@ -1,0 +1,10 @@
+criar o banco de dados com utf8mb4
+
+colocar os dados do banco no mysql no .env
+
+criar um banco no mysql utf8_general_ci
+
+php artisan migrate:fresh
+
+php artisan db:seed
+
