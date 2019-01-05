@@ -1,3 +1,11 @@
+Setando esses passsos via cmd ou powershell na pasta do projeto
+
+php artisan update
+
+copy .env.example .env
+
+php artisan key generate
+
 criar o banco de dados com utf8mb4
 
 colocar os dados do banco no mysql no .env

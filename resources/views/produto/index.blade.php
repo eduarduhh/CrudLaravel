@@ -10,7 +10,7 @@
     <div class="table-responsive">
       @if (session('cad'))
         <div class="alert alert-success pull-right">
-            <a href="#" class="close" 
+            <a href="#" class="close"
                data-dismiss="alert"
                aria-label="close">&times;</a>
             {{ session('cad') }}
@@ -18,7 +18,7 @@
         @endif
          @if (session('up'))
         <div class="alert alert-warning pull-right">
-            <a href="#" class="close" 
+            <a href="#" class="close"
                data-dismiss="alert"
                aria-label="close">&times;</a>
             {{ session('up') }}
@@ -26,7 +26,7 @@
         @endif
          @if (session('del'))
         <div class="alert alert-danger pull-right">
-            <a href="#" class="close" 
+            <a href="#" class="close"
                data-dismiss="alert"
                aria-label="close">&times;</a>
             {{ session('del') }}
@@ -39,7 +39,7 @@
           <th>CATEGORIA</th>
           <th>QUANTIDADE</th>
           <th>OPÇÕES</th>
-          
+
         </thead>
                @foreach ($produtos as $prod)
         <tr>
@@ -48,7 +48,7 @@
           <td>{{ $prod->categoria}}</td>
           <td>{{ $prod->quantidade}}</td>
          <td>
-                <form action="{{ route('item.destroy',$prod->codigo) }}" method="POST">
+                <form action="{{ route('produtos.destroy',$prod->codigo) }}" method="POST">
                     <a class="btn btn-primary" href="{{ route('produtos.edit',$prod->codigo) }}">Editar</a>
                     @csrf
                     @method('DELETE')
